@@ -72,39 +72,3 @@ public class InteractiveImage : MonoBehaviour
 }
 
 
-static class Gradient
-{
-    public static Color getGradientColor(Color c1, Color c2, int size, int position)
-    {
-        float rMax = c1.r;
-        float rMin = c2.r;
-        float gMin = c1.g;
-        float gMax = c2.g;
-        float bMin = c1.b;
-        float bMax = c2.b;
-        // ... and for B, G
-        var rAverage = rMin + (rMax - rMin) * position / size;
-        var gAverage = gMin + (gMax - gMin) * position / size;
-        var bAverage = bMin + (bMax - bMin) * position / size;
-        return new Color(rAverage, gAverage, bAverage);
-    }
-    public static Color[] getGradient(Color c1, Color c2, int size)
-    {
-        float rMax = c1.r;
-        float rMin = c2.r;
-        float gMin = c1.g;
-        float gMax = c2.g;
-        float bMin = c1.b;
-        float bMax = c2.b;
-        // ... and for B, G
-        var colorList = new List<Color>();
-        for (int i = 0; i < size; i++)
-        {
-            var rAverage = rMin + (rMax - rMin) * i / size;
-            var gAverage = gMin + (gMax - gMin) * i / size;
-            var bAverage = bMin + (bMax - bMin) * i / size;
-            colorList.Add(new Color(rAverage, gAverage, bAverage));
-        }
-        return colorList.ToArray();
-    }
-}

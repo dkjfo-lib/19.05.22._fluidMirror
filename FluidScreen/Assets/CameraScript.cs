@@ -14,7 +14,7 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        cameraTargetPosition = cameraTrans.position;
+        cameraTargetPosition = cameraTrans.localPosition;
     }
     
     void Update()
@@ -23,6 +23,6 @@ public class CameraScript : MonoBehaviour
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         cameraTargetPosition += Vector3.up * scroll * scrollSpeed;
-        cameraTrans.position = Vector3.Lerp(cameraTrans.position, cameraTargetPosition, moveRate);
+        cameraTrans.localPosition = Vector3.Lerp(cameraTrans.localPosition, cameraTargetPosition, moveRate);
     }
 }

@@ -149,16 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f76b17ce5af51448ebaf2de5f4f83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetCamera: {fileID: 415919753}
   maxCubesNumb: 10000
   cube_prefab: {fileID: 1356232233295250914, guid: d56b8f732ab4fbf44898923c9b2b1735,
     type: 3}
-  size: 30
+  size: 20
+  texture: {fileID: 2800000, guid: 16f1e03c3c89a994290d0e7d01ffb878, type: 3}
   mousePosition: {x: 19.334225, y: 0, z: -0.3375104}
   maxDistance: 50
   hPlus: 2
   colorDefault: {r: 0.1254902, g: 0, b: 0.17254902, a: 1}
   colorClose: {r: 0.79607844, g: 0.7058824, b: 0.83137256, a: 1}
+  colorDeepth: 10
   normalInfluenceSpeed: 0.125
   fastInfluenceSpeed: 0.25
   allUp: 0
@@ -255,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415919751}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 15, y: 10, z: 0}
+  m_LocalPosition: {x: 17, y: 17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1129292676}
@@ -324,7 +325,7 @@ MonoBehaviour:
   cameraTrans: {fileID: 415919754}
   scrollSpeed: 5
   moveRate: 0.125
-  cameraTargetPosition: {x: 15, y: 10, z: 0}
+  cameraTargetPosition: {x: 17, y: 17, z: 0}
 --- !u!4 &1129292676
 Transform:
   m_ObjectHideFlags: 0
@@ -332,15 +333,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129292674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.9999957, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 532129565}
   - {fileID: 415919754}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1806944385
 GameObject:
   m_ObjectHideFlags: 0
